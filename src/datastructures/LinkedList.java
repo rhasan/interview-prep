@@ -2,7 +2,12 @@ package datastructures;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-
+/**
+ * Generic linked list 
+ * @author Rakebul
+ *
+ * @param <Item> Item data type
+ */
 public class LinkedList<Item> implements Iterable<Item> {
 
 	//number of elements
