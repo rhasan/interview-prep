@@ -1,4 +1,4 @@
-package datastructures;
+package ccinterviews.datastructures;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 

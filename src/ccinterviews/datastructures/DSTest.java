@@ -1,4 +1,4 @@
-package datastructures;
+package ccinterviews.datastructures;
 
 import static org.junit.Assert.*;
 
