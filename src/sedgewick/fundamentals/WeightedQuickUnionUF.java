@@ -3,16 +3,19 @@ package sedgewick.fundamentals;
 import edu.princeton.cs.introcs.StdIn;
 import edu.princeton.cs.introcs.StdOut;
 
-public class QuickUnionUF {
+public class WeightedQuickUnionUF {
 
 	private int[] id;
+	private int[] sz;
 	private int count;
 	
-	public QuickUnionUF(int N) {
+	public WeightedQuickUnionUF(int N) {
 		count = N;
 		id = new int[N];
+		sz = new int[N];
 		for(int i = 0;i < N;i++) {
 			id[i] = i;
+			sz[i] = 1;
 		}
 	}
 	/**
@@ -34,8 +37,19 @@ public class QuickUnionUF {
 	public void union(int p,int q) {
 		int pid = find(p);
 		int qid = find(q);
-		if(pid==qid)return;
-		id[pid] = qid;
+		if(pid == qid)return;
+		
+		//Balance by linking root of smaller tree to root of larger tree
+		if(sz[pid] < sz[qid]) {
+			id[pid] = qid;
+			sz[qid] += sz[pid];
+		}
+		else {
+			id[qid] = pid;
+			sz[pid] += sz[qid];
+		}
+		
+		
 		count--;
 	}
 	
@@ -45,7 +59,7 @@ public class QuickUnionUF {
 
     public static void main(String[] args) {
         int N = StdIn.readInt();
-        QuickUnionUF uf = new QuickUnionUF(N);
+        WeightedQuickUnionUF uf = new WeightedQuickUnionUF(N);
 
         // read in a sequence of pairs of integers (each in the range 0 to N-1),
          // calling find() for each pair: If the members of the pair are not already
