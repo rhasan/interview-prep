@@ -24,7 +24,7 @@ public class SortingClient {
         show(a);
         
         
-        Shuffeler.shuffel(a);
+        Shuffler.shuffel(a);
         System.out.println("Shell sort:");
         timer = new Stopwatch();
         Shell.sort(a);

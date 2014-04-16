@@ -2,7 +2,7 @@ package sedgewick.sorting;
 
 import java.util.Random;
 
-public class Shuffeler {
+public class Shuffler {
 	
 	private static long seed;
 	private static Random random;
