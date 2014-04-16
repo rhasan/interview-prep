@@ -30,18 +30,19 @@ public class Merge {
 	}
 	
 	
+	private static void sort(Comparable[] a, int lo, int hi) {
+		
+		if(hi <= lo) return;
+		int mid = lo + (hi - lo)/2;
+		sort(a, lo, mid);
+		sort(a, mid+1, hi);
+		merge(a, lo, mid, hi);
+	}
+	
 	public static void sort(Comparable[] a) {
 		aux = new Comparable[a.length];
-		int N = a.length;
 		
-		for(int sz = 1; sz < N; sz = sz+sz) {
-			for(int lo = 0; lo < N-sz; lo = lo+sz+sz) {
-				int mid = lo+sz-1;
-				int hi = Math.min(lo+sz+sz-1, N-1);
-				merge(a,lo,mid,hi);
-			}
-		}
-		
+		sort(a, 0, a.length-1);
 	}
 	
 	
