@@ -32,5 +32,22 @@ public class SortingClient {
         System.out.println("Time:"+elapsed);
         show(a);
         
+        
+        Shuffler.shuffel(a);
+        System.out.println("Merge sort:");
+        timer = new Stopwatch();
+        Merge.sort(a);
+        elapsed = timer.elapsedTime();
+        System.out.println("Time:"+elapsed);
+        show(a);
+
+        Shuffler.shuffel(a);
+        System.out.println("MergeBU sort:");
+        timer = new Stopwatch();
+        MergeBU.sort(a);
+        elapsed = timer.elapsedTime();
+        System.out.println("Time:"+elapsed);
+        show(a);    
+    
     }
 }
