@@ -64,6 +64,15 @@ public class SortingClient {
         elapsed = timer.elapsedTime();
         System.out.println("Time:"+elapsed);
         show(a);    
+        
+        
+        Shuffler.shuffel(a);
+        System.out.println("Quick sort:");
+        timer = new Stopwatch();
+        Quick.sort(a);
+        elapsed = timer.elapsedTime();
+        System.out.println("Time:"+elapsed);
+        show(a);          
     
     }
 }
