@@ -72,6 +72,15 @@ public class SortingClient {
         Quick.sort(a);
         elapsed = timer.elapsedTime();
         System.out.println("Time:"+elapsed);
+        show(a);     
+        
+        
+        Shuffler.shuffel(a);
+        System.out.println("Heap sort:");
+        timer = new Stopwatch();
+        Heap.sort(a);
+        elapsed = timer.elapsedTime();
+        System.out.println("Time:"+elapsed);
         show(a);          
     
     }
