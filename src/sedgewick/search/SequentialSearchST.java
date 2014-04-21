@@ -22,10 +22,11 @@ public class SequentialSearchST<Key, Value> {
 	}
 	
     public SequentialSearchST() {
-    	N = 0;
-    	first = null;
+
     }
-	
+	public boolean contains(Key key) {
+		return get(key) != null;
+	}
 	public void put(Key key, Value val) {
 		if(val == null) {
 			delete(key);
@@ -69,7 +70,7 @@ public class SequentialSearchST<Key, Value> {
 		if(x.key.equals(key)) {
 			N--;
 			Node t = x.next;
-			x = null; // Avoid loitering
+			x = null; // to avoid loitering
 			return t;
 		}
 		x.next = delete(x.next, key);
