@@ -1,4 +1,4 @@
-package tco14.april19;
+package topcoder.tco14.april19;
 
 public class SpamChecker {
 

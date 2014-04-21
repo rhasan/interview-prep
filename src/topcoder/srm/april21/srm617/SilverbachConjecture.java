@@ -1,4 +1,4 @@
-package srm.april21.srm617;
+package topcoder.srm.april21.srm617;
 
 public class SilverbachConjecture {
 
