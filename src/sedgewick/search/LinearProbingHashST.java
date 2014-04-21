@@ -73,17 +73,21 @@ public class LinearProbingHashST<Key, Value> {
 		keys[i] = null;
 		values[i] = null;
 		
+		// rehash all keys in same cluster
 		i = (i + 1) % M;
 		while(keys[i] != null) {
 			Key rhk = keys[i];
 			Value rhv = values[i];
-			put(rhk,rhv);
+			
 			keys[i] = null;
 			values[i] = null;
+			
 			N--;
+			put(rhk, rhv);
 			i = (i + 1) % M;
 		}
 		N--;
+		
 		// halves size of array if it's 12.5% full or less
 		if(N>0 && N <= M/8) {
 			resize(M/2);
