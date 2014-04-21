@@ -35,7 +35,7 @@ public class SeparateChainingHashST<Key, Value> {
 	
 	public void put(Key key, Value val) {
 		//handle key == null
-		if(key == null) {
+		if(val == null) {
 			delete(key);
 			return;
 		}
