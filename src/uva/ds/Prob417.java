@@ -134,23 +134,25 @@ class Prob417 {
 //		sol.solution(fis);
 //		
 //	}	
+
+
 }
 
 
-class Main {
-
-//	public static void main(String[] args) throws FileNotFoundException {
+//class Main {
+//
+////	public static void main(String[] args) throws FileNotFoundException {
+////		Prob417 sol = new Prob417();
+////		FileInputStream fis = new FileInputStream("in/h.in");
+////		sol.solution(fis);
+////		
+////	}
+//
+//	public static void main(String[] args) {
 //		Prob417 sol = new Prob417();
-//		FileInputStream fis = new FileInputStream("in/h.in");
-//		sol.solution(fis);
+//		sol.solution(System.in);
 //		
 //	}
-
-	public static void main(String[] args) {
-		Prob417 sol = new Prob417();
-		sol.solution(System.in);
-		
-	}
-		
-		
-}
+//		
+//		
+//}
