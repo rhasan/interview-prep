@@ -58,14 +58,14 @@ class Prob11917 {
 //	}	
 }
 
-class Main {
-
-	public static void main(String[] args) {
-		Prob11917 sol = new Prob11917();
-
-		sol.solution(System.in);
-
-	}
-}
+//class Main {
+//
+//	public static void main(String[] args) {
+//		Prob11917 sol = new Prob11917();
+//
+//		sol.solution(System.in);
+//
+//	}
+//}
 
 
