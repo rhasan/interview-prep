@@ -41,13 +41,13 @@ class Prob10815 {
 }
 
 
-class Main {
-
-	public static void main(String[] args) {
-		Prob10815 sol = new Prob10815();
-		
-		
-		sol.solution(System.in);
-	
-	}
-}
+//class Main {
+//
+//	public static void main(String[] args) {
+//		Prob10815 sol = new Prob10815();
+//		
+//		
+//		sol.solution(System.in);
+//	
+//	}
+//}
