@@ -80,7 +80,7 @@ public class SeparateChainingHashST<Key, Value> {
 	}
 	
 	private void resize(int capacity) {
-		SeparateChainingHashST<Key, Value> tmp = new SeparateChainingHashST<Key, Value>();
+		SeparateChainingHashST<Key, Value> tmp = new SeparateChainingHashST<Key, Value>(capacity);
 		for(int i = 0; i < M; i++) {
 			for(Key key:st[i].keys()) {
 				tmp.put(key, st[i].get(key));
