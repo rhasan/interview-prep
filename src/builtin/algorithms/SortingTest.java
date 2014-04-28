@@ -37,7 +37,7 @@ public class SortingTest {
 	
 	public void testShuffleAndQucikSort() {
 		int[] input = {10,50,6000,85,3,1,100};
-		ArrayList<Integer> list = new ArrayList<>();
+		ArrayList<Integer> list = new ArrayList<Integer>();
 		for(int x:input) {
 			list.add(x);
 		}
